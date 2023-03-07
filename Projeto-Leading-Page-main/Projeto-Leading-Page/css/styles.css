@@ -93,7 +93,7 @@ hr {
     border: 1px solid #FFAF00;
 }
 
-img {
+#mouse {
     width: 80px;
     height: 80px;
     margin-top: 25px;
@@ -263,5 +263,39 @@ article div #formatacao-titulo-sobre {
 
 /* smartphones >= 0px ate 768px */
 @media screen and (max-width: 991px) {
-    
+
+    .mostrarMenu {
+        left: 0;
+        opacity: 1;
+    }
+
+    /* temporariamente off */
+    main,
+    footer {
+        /* display: none; */
+    }
+
+    header #menu-mobile {
+        display: block;
+        
+    }
 }
+
+header nav {
+    /* display: none; */
+    position: fixed;
+    top: 60px;
+    left: -80vw;
+    width: 80vw;   /* viewport width*/
+    height: 100vh;  /* viewport heigth*/
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #F9003D;
+    opacity: 0;
+    transition: left 0.4s, opacity 0.6s;
+}
+
+/* Banner */
+
+main .banner
